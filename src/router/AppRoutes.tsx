@@ -1,17 +1,13 @@
 import { Route, Routes } from 'react-router-dom'
 import { AppLayout } from '../layout/AppLayout'
-import { SeedLandingPage } from '../pages/SeedLandingPage'
+import { CommoditiesPage } from '../pages/CommoditiesPage'
 
-/**
- * Rutas relativas cuando el Shell se monta bajo `/hub/react-remote/*` en el host
- * (`Routes` descendiente). Rutas desde la raíz cuando corre solo con `BrowserRouter`.
- */
 export function AppRoutes() {
   return (
     <Routes>
       <Route element={<AppLayout />}>
-        <Route index element={<SeedLandingPage />} />
-        <Route path="*" element={<SeedLandingPage />} />
+        <Route index element={<CommoditiesPage />} />
+        <Route path="*" element={<CommoditiesPage />} />
       </Route>
     </Routes>
   )
