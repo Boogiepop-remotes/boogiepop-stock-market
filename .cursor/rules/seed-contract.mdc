@@ -1,0 +1,25 @@
+---
+description: Contrato del seed React Vite (Boogiepop). Leé AGENTS.md para el detalle completo.
+globs: ["**/*"]
+alwaysApply: true
+---
+
+Leé [AGENTS.md](../../AGENTS.md) antes de hacer cambios. Resumen rápido:
+
+## Archivos protegidos (no modificar sin consenso)
+
+- `vite.config.ts` — Module Federation: nombre `boogiepopRemote`, `./Shell`, `remoteEntry.js`
+- `nginx.conf`, `Dockerfile` — puerto 8080 y `/health` son contractuales con ECS
+- `.github/workflows/`, `.gitlab-ci.yml` — coordinar con infra
+- `src/mf-remote/RemoteShell.tsx` — contrato de exposición MF
+
+## UI
+
+Usá componentes de `boogiepop-ui` (`Button`, `Card`, `Input`, `Select`, `Text`) y clases `.bp-*`.
+Tokens disponibles via `--bp-primary`, `--bp-body`, `--bp-border`, etc.
+No redefinir tokens en el seed — los cambios globales van en el repo `boogiepop-ui`.
+
+## Auth
+
+Usá `boogiepop-auth-sdk`: `resolveBoogiepopSession()`, `hasRole()`, `hasWorkspace()`, `hasAbility()`.
+El snapshot devuelve `workspaces: string[]`, `roles: BoogiepopRole[]`, `abilities: BoogiepopFunctionalAbility[]`.

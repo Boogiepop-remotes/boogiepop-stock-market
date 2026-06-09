@@ -1,0 +1,10 @@
+{
+  "overrides": {
+    "1.0.0": {
+      "mandatory": true,
+      "severity": "security",
+      "description": "Initial seed release — auth SDK + Module Federation setup",
+      "link": "https://github.com/blanck1945/boogiepop-stock-market"
+    }
+  }
+}

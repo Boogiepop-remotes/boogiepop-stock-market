@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+@import 'boogiepop-ui/styles';
+
+/*
+  Mapeo de tokens bp-* a clases utilitarias Tailwind.
+  Genera: text-bp-body, bg-bp-muted-bg, border-bp-border, etc.
+*/
+@theme {
+  --color-bp-primary:     var(--bp-primary);
+  --color-bp-accent:      var(--bp-accent);
+  --color-bp-bg:          var(--bp-bg);
+  --color-bp-muted-bg:    var(--bp-muted-bg);
+  --color-bp-body:        var(--bp-body);
+  --color-bp-muted:       var(--bp-muted);
+  --color-bp-border:      var(--bp-border);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
